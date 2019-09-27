@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+{% block head %}
+<div>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <a class="navbar-brand">
+    <img class="img-responsive" src="{% static 'logo.saae.jpg' %}" alt="My image" style="width: 200px">
+  <div class="navbar-collapse" id="Navbar"></div>
+     <div class="navbar-nav ml-auto">
+         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">SAIR</button>
+             <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Deseja realmente sair?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/logout/" class="btn btn-success" role="button" style="text-color:black">Sim</a>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+     </div>
+
+  </div>
+</nav>
+</div>
+{% endblock %}

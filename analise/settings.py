@@ -1,10 +1,10 @@
 import os
-from decouple import config
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = '7=+-(x2=--4*pe6s2*68uc3^3pi!2-h#y=w&eh9r0d2tb5y85$'
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['francelmo87.pythonanywhere.com', '127.0.0.1']

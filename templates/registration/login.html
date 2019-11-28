@@ -12,9 +12,9 @@
 
   <style>
     body{
-        color: #FF4040;
+        color: #000000;
         font-weight: bold;
-        background-image: url(static/laboratorio.jpg);
+        background-color: #2F4F4F;
         background-repeat: no-repeat;
         background-position: right top;
         background-attachment: scroll;
@@ -25,11 +25,15 @@
 <body>
 <div class="container mt-4">
   <form method="POST">{% csrf_token %}
-    <div class="row" style="margin-left:35%; margin-top:20%">
-        <div class="col-4" style="border: 2px solid;border-radius: 5px;border-width: 5px;padding-bottom: 50px">
-          <h2 class="text-center">Área Restrita</h2>
+    <div class="row" style="margin-left:35%; margin-top:25%">
+        <div class="col-4" style="padding-bottom: 0px;background-color: white">
+          <h2 class="text-center" style="">Acesso às análises</h2>
             {{ form.as_p }}
-         <button type="submit" class="btn btn-success">Entrar</button>
+            <button type="submit" class="btn btn-info">Entrar</button>
+              <div style="text-align: right">
+              <a href="#"  data-toggle="tooltip" title="USUÁRIO: Digite o tipo de pessoa: PJ ou PF + Numero do CNPJ ou CPF(tudo junto sem barra e traços)
+              SENHA: Digite a palavra 'saae' (minúsculo) + número do Protocolo">Ajuda para acesso</a>
+              </div>
       <br></div>
     </div>
   </form>
